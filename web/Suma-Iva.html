@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>CALCULAR IVA</title>
+    </head>
+    <body>
+        <form action="/CalculaIva/webresources/calcularIVA" method="post" onchange="Sumar();">
+
+
+            <br/>
+            Precio producto 1 <br/>
+            <input id ="valora" ><br />
+            <br/>
+            <br/>
+            Precio producto 2 <br/>
+            <input id ="valorb" ><br />
+            <br/>           
+            <br/>           
+
+            <script>
+                function Sumar() {
+                    var valora = document.getElementById('valora').value;
+                    var valorb = document.getElementById('valorb').value;
+                    var total = parseInt(valora) + parseInt(valorb);
+                    if (total !== 0) {
+                        var suma = document.getElementById('total').value = total;
+                    }
+                }
+            </script>
+
+            <form onClick="Sumar();">
+                <b>Total</b>   <br/>
+                <input type="text" id="total" name="Precio" ><br />
+                <br/>
+
+                <input type="submit" value="Calcular Iva">
+            </form>       
+    </body>
+</html>
